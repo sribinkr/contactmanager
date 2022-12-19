@@ -1,0 +1,7 @@
+angular - front end dev frame wrk
+
+basic commands
+
+basic building block
+
+1.module - used to add 3rd party library

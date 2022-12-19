@@ -1,0 +1,40 @@
+<div class="container mt-4 title">
+    <div class="row">
+        <div class="col">
+            <h1>
+                <i class="fa-solid fa-eye"></i> &nbsp;
+                View Contact Page
+
+            </h1>
+            <p style="text-align: justify;">
+                This is dummy data : Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nisi architecto ad
+                doloremque culpa inventore voluptate nemo, commodi deserunt sapiente veniam iste velit aspernatur alias
+                accusamus autem corporis est fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nisi
+                architecto ad doloremque culpa inventore voluptate nemo, commodi deserunt sapiente veniam iste velit
+                aspernatur alias accusamus autem corporis est fuga?
+
+
+            </p>
+        </div>
+    </div>
+
+   <div class="container mt-4 mb-5">
+    <div class="row border p-5 align-items-center">
+        <div class="col-md-4">
+            <img width="200px" [src]="contact.photo" alt="no image" >
+         <br>
+         <a class="btn btn-warning ms-3 mt-2" routerLink="/"> <i class="fa-solid fa-circle-chevron-left"></i> Go Back</a>
+        </div>
+        <div class="col-md-8">
+            <ul class="list-group">
+                <li class="list-group-item">Name: <b>{{contact.name}}</b> </li>
+                <li class="list-group-item">E mail:  <b>{{contact.email}}</b> </li>
+                <li class="list-group-item">Mobile:  <b>{{contact.mobile}}</b></li>
+                <li class="list-group-item">Company:  <b>{{contact.company}}</b></li>
+                <li class="list-group-item">Title:  <b>{{contact.title}}</b></li>
+                <li class="list-group-item">Group:  <b>{{groupName}}</b></li>
+ 
+            </ul>
+        </div>
+    </div>
+   </div> 
