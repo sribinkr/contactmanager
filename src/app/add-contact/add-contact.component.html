@@ -20,45 +20,48 @@
 
 
 
-
     <div class="container">
         <div class="row">
+          
             <div class="col-md-8">
                <form class="border p-3 rounded">
                 <div class="mb-2">
-                    <input name="contactName" [(ngModel)]="contactName" placeholder="name" type="text" class="form-control">
+                    <input name="id" [(ngModel)]="contact.id" placeholder="Contact Id" type="text" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input placeholder="Photo URL" type="text" class="form-control">
+                    <input name="contactName" [(ngModel)]="contact.name" placeholder="name" type="text" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input placeholder="Email ID" type="text" class="form-control">
+                    <input name="photo" [(ngModel)]="contact.photo" placeholder="Photo URL" type="text" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input placeholder="Mobile Number" type="text" class="form-control">
+                    <input name="email" [(ngModel)]="contact.email" placeholder="Email ID" type="text" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input placeholder="Company" type="text" class="form-control">
+                    <input name="mobile" [(ngModel)]="contact.mobile" placeholder="Mobile Number" type="text" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input placeholder="Title" type="text" class="form-control">
+                    <input name="company" [(ngModel)]="contact.company" placeholder="Company" type="text" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <select name="" id="" class="form-control">
+                    <input name="title" [(ngModel)]="contact.title" placeholder="Title" type="text" class="form-control">
+                </div>
+                <div class="mb-2">
+                    <select name="groupId" [(ngModel)]="contact.groupId" id="" class="form-control">
                         <option value="" selected hidden disabled>Select A Group</option>
                         <option value="{{group.id}}" *ngFor="let group of allGroups" >
                             {{group.name}}</option>
                     </select>
                 </div>
                 <div class="mb-2">
-                    <input (click)="addContact" value="Create" type="button" class="btn btn-success">
+                    <input (click)="addContact()" value="Create" type="button" class="btn btn-success">
                     <a routerLink="/" class="btn btn-warning ms-3">Close</a>
                 </div>
 
                </form> 
             </div>
             <div class="col-md-4">
-                <img src="https://www.bainbridgedecaturga.com/wp-content/uploads/2019/05/generic-person-icon-1.png" alt="no image" class="contact_image">
+                <img [src]="contact.photo" alt="no image" class="contact_image mt-5">
 
             </div>
         </div>

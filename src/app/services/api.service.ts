@@ -41,5 +41,15 @@ export class ApiService {
 
   }
 
+  // function for deleting a contact
+  deleteContact(contactId:any){
+   return  this.http.delete(`${this.baseUrl}/${contactId}`)
+  }
+
+  //update contact detils according to user select
+  updateContact(contactId:any,contactBody:any){
+   return  this.http.put(`${this.baseUrl}/${contactId}`,contactBody)
+  }
+
 }
 
